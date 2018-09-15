@@ -69,9 +69,9 @@ const MultilineText = styled.Text`
 
 const FooterText = styled.Text`
   font-size: 10px;
-  position: absolute;
-  bottom: 10px;
-  margin: 0 auto;
+  position: fixed;
+  bottom: -20px;
+  /* margin: 0 auto; */
 `;
 
 class Template extends PureComponent {
