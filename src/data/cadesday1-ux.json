@@ -1,0 +1,38 @@
+{
+  "template": 1,
+  "meta": {
+    "type": "Oficina",
+    "name": "Aplicando os conceitos de UX para criação de interfaces",
+    "location": "IFRN Natal-Central"
+  },
+  "eventName": "CADESDAY #1 - Oficina \"Aplicando os conceitos de UX para criação de interfaces\"",
+  "date": "2018-08-25T13:00:00-03:00",
+  "location": "IFRN Campus Natal-Central",
+  "hours": 3,
+  "participants": [
+    { "name": "Emanuel", "email": "emanuelaugustosilva@hotmail.com" },
+    { "name": "Flávio Enrique Lima Costa", "email": "enrikeflavio@gmail.com" },
+    {
+      "name": "Juciane de Azevedo Chianca",
+      "email": "juciane.chianca@gmail.com"
+    },
+    {
+      "name": "Geovana Karla Ferreira Da Silva",
+      "email": "geovanakarla25@gmail.com"
+    },
+    {
+      "name": "Adlem Dutra da Silva",
+      "email": "adlem.dutra@escolar.ifrn.edu.br"
+    },
+    {
+      "name": "Esther Aragão da Silva Santana",
+      "email": "estheraragaos@gmail.com"
+    },
+    { "name": "Matheus Vinícius da Silva", "email": "matheus10xy@gmail.com" },
+    {
+      "name": "Ana Paula Oliveira da Silva",
+      "email": "ana.paula1997@hotmail.com"
+    },
+    { "name": "Valério Farias de Carvalho", "email": "valeriofc@gmail.com" }
+  ]
+}

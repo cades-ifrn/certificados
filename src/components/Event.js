@@ -8,6 +8,7 @@ const Item = styled.div`
   filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
   text-align: initial;
   min-width: 255px;
+  max-width: 255px;
 
   &:not(:last-child) {
     margin-right: 1rem;

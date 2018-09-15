@@ -2,13 +2,13 @@
   "template": 1,
   "meta": {
     "type": "Minicurso",
-    "name": "Introdução à GIT",
+    "name": "Desenvolvimento de API com Laravel",
     "location": "IFRN Natal-Central"
   },
-  "eventName": "Minicurso de Introdução à GIT",
-  "date": "2018-08-25T09:00:00-03:00",
-  "location": "CADESDAY #1 no IFRN Campus Natal-Central",
-  "hours": 3,
+  "eventName": "CADESDAY #1 - Minicurso de Desenvolvimento de API com Laravel",
+  "date": "2018-08-25T13:00:00-03:00",
+  "location": "IFRN Campus Natal-Central",
+  "hours": 4,
   "participants": [
     { "name": "Thiago Nascimento", "email": "thiagonascim@yahoo.com" },
     {
