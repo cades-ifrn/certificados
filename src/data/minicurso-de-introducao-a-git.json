@@ -1,5 +1,10 @@
 {
   "template": 1,
+  "meta": {
+    "type": "Minicurso",
+    "name": "Introdução à GIT",
+    "location": "IFRN Natal-Central"
+  },
   "eventName": "Minicurso de Introdução à GIT",
   "date": "2018-08-25T09:00:00-03:00",
   "location": "CADESDAY #1 no IFRN Campus Natal-Central",

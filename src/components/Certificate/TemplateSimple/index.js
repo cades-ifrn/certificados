@@ -1,6 +1,7 @@
-import React, { Component } from "react";
-import { Document, Link } from "@react-pdf/renderer";
+import React, { PureComponent } from "react";
+import { Link } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
+import { DateTime } from "luxon";
 
 import LogoPng from "./assets/logo.png";
 import SignaturePng from "./assets/minora-sign.png";
@@ -73,35 +74,40 @@ const FooterText = styled.Text`
   margin: 0 auto;
 `;
 
-class Template extends Component {
+class Template extends PureComponent {
   render() {
     const { id, name, eventName, date, location, hours } = this.props;
     const url = `https://certificados.cades.natal/view/${id}`;
+    const datetime = DateTime.fromISO(date);
 
     return (
-      <Document height="100vh" width="100vw">
-        <Certificate size="A4" orientation="landscape">
-          <MainContainer>
-            <Logo src={LogoPng} />
-            <Heading>Certificado de Participação</Heading>
-            <SinglelineText>Certificamos que</SinglelineText>
-            <Name>{name}</Name>
-            <MultilineText>
-              participou do {eventName} realizado no dia {date} no {location}{" "}
-              com carga horária total de {hours} horas.
-            </MultilineText>
-            <Signature src={SignaturePng} />
-            <SignatureSubject>Leonardo Ataide Minora</SignatureSubject>
-            <SignatureRole>Professor Titular, IFRN</SignatureRole>
-            <FooterText>
-              Para verificar a autencidade deste documento acesse{" "}
-              <Link src={url}>{url}</Link>
-            </FooterText>
-          </MainContainer>
-        </Certificate>
-      </Document>
+      <Certificate size="A4" orientation="landscape">
+        <MainContainer>
+          <Logo src={LogoPng} />
+          <Heading>Certificado de Participação</Heading>
+          <SinglelineText>Certificamos que</SinglelineText>
+          <Name>{name}</Name>
+          <MultilineText>
+            participou do {eventName} realizado no dia{" "}
+            {datetime.setLocale("pt-BR").toLocaleString(DateTime.DATE_FULL)} no{" "}
+            {location} com carga horária total de {hours} horas.
+          </MultilineText>
+          <Signature src={SignaturePng} />
+          <SignatureSubject>Leonardo Ataide Minora</SignatureSubject>
+          <SignatureRole>Professor Titular, IFRN</SignatureRole>
+          <FooterText>
+            Para verificar a autencidade deste documento acesse{" "}
+            <Link src={url}>{url}</Link>
+          </FooterText>
+        </MainContainer>
+      </Certificate>
     );
   }
 }
+
+Template.selector = (eventData, participantData) => ({
+  ...eventData,
+  ...participantData
+});
 
 export default Template;
