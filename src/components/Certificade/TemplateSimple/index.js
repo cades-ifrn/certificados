@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Document, Text, Link } from "@react-pdf/renderer";
+import { Document, Link } from "@react-pdf/renderer";
 import styled from "@react-pdf/styled-components";
 
-import LogoPng from "./cor-horizontal.png";
-import SignaturePng from "./minora-assinatura.png";
+import LogoPng from "./assets/logo.png";
+import SignaturePng from "./assets/minora-sign.png";
 
 const Certificate = styled.Page`
   flex-direction: row;
@@ -73,8 +73,11 @@ const FooterText = styled.Text`
   margin: 0 auto;
 `;
 
-class App extends Component {
+class Template extends Component {
   render() {
+    const { id, name, eventName, date, location, hours } = this.props;
+    const url = `https://certificados.cades.natal/view/${id}`;
+
     return (
       <Document height="100vh" width="100vw">
         <Certificate size="A4" orientation="landscape">
@@ -82,20 +85,17 @@ class App extends Component {
             <Logo src={LogoPng} />
             <Heading>Certificado de Participação</Heading>
             <SinglelineText>Certificamos que</SinglelineText>
-            <Name>Felipe Mateus Freire Pontes</Name>
+            <Name>{name}</Name>
             <MultilineText>
-              participou do Minicurso de Introdução à GIT realizado no dia 25 de
-              agosto de 2018 no CADESDAY #1 realizado no IFRN Campus
-              Natal-Central com carga horária total de 3 horas.
+              participou do {eventName} realizado no dia {date} no {location}{" "}
+              com carga horária total de {hours} horas.
             </MultilineText>
             <Signature src={SignaturePng} />
             <SignatureSubject>Leonardo Ataide Minora</SignatureSubject>
             <SignatureRole>Professor Titular, IFRN</SignatureRole>
             <FooterText>
               Para verificar a autencidade deste documento acesse{" "}
-              <Link src="https://certificados.cades.natal/88d48172d0dc2b862e0c6312c14f675c4328d03a">
-                https://certificados.cades.natal/88d48172d0dc2b862e0c6312c14f675c4328d03a
-              </Link>
+              <Link src={url}>{url}</Link>
             </FooterText>
           </MainContainer>
         </Certificate>
@@ -104,4 +104,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Template;

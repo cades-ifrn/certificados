@@ -1,26 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+
 import registerServiceWorker from "./registerServiceWorker";
+import registerFonts from "./registerFonts";
 
-import { Font } from "@react-pdf/renderer";
+import Root from "./Root";
 
-Font.register(
-  "https://cdn.rawgit.com/google/fonts/c9d3903b/ofl/lato/Lato-Regular.ttf",
-  {
-    family: "Lato",
-    weight: 400
-  }
-);
-
-Font.register(
-  "https://cdn.rawgit.com/google/fonts/c9d3903b/ofl/lato/Lato-Bold.ttf",
-  {
-    family: "Lato-Bold",
-    weight: 700
-  }
-);
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Root />, document.getElementById("root"));
+registerFonts();
 registerServiceWorker();

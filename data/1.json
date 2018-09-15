@@ -1,0 +1,45 @@
+{
+  "template": 1,
+  "eventName": "Minicurso de Introdução à GIT",
+  "date": "2018-08-25T09:00:00-03:00",
+  "location": "CADESDAY #1 no IFRN Campus Natal-Central",
+  "hours": 3,
+  "participants": [
+    { "name": "Thiago Nascimento", "email": "thiagonascim@yahoo.com" },
+    {
+      "name": "Tell Marcus de Souza Moitas",
+      "email": "tell.moitas@escolar.ifrn.edu.br"
+    },
+    { "name": "Igor Alisson Silva", "email": "igoralissoncn@gmail.com" },
+    {
+      "name": "Simei Thander de Assis Silva",
+      "email": "simeithander@gmail.com"
+    },
+    {
+      "name": "Emanoel Messias Gomes de Lima",
+      "email": "messiasgomes540@gmail.com"
+    },
+    {
+      "name": "Marco Aurélio Adriano da Silva",
+      "email": "m.m.gti.evolution@gmail.com"
+    },
+    { "name": "José Handerson da Silva", "email": "handersonsylva@gmail.com" },
+    { "name": "Luan Com. Redmann", "email": "luandacostaredmann@gmail.com" },
+    {
+      "name": "Pablo Ramon Varela de Souza",
+      "email": "pabloramon044@gmail.com"
+    },
+    { "name": "Fernando Brüch Dantas", "email": "fbruchd@gmail.com" },
+    { "name": "Cleiane Clementino Bondade", "email": "clei.bondade@gmail.com" },
+    { "name": "Marlon Aelson Gomes", "email": "marlon.aelson.gomes@gmail.com" },
+    { "name": "Weslley Alves Vieira", "email": "Weslleyalvesv13@gmail.com" },
+    {
+      "name": "Kevin Wallace Mendonça da Silva",
+      "email": "kevin@t3edu.com.br"
+    },
+    {
+      "name": "Felipe Barbosa Nicolau Fernandes",
+      "email": "felipebnf@outlook.com"
+    }
+  ]
+}
