@@ -127,7 +127,7 @@ export default class Home extends Component {
               })}
             </Events>
           ) : (
-            this.validateEmail(email) && <P>Nenhum evento encontrado.</P>
+            this.validateEmail(email) && <P>Nenhuma participação encontrada.</P>
           )}
         </Wrapper>
       </Container>
