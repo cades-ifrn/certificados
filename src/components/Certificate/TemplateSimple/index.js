@@ -77,7 +77,7 @@ const FooterText = styled.Text`
 class Template extends PureComponent {
   render() {
     const { id, name, eventName, date, location, hours } = this.props;
-    const url = `https://certificados.cades.natal/view/${id}`;
+    const url = `https://certificados.cades.natal.br/view/${id}`;
     const datetime = DateTime.fromISO(date);
 
     return (
