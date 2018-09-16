@@ -78,10 +78,12 @@ export default class Home extends Component {
       return [];
     }
 
+    const lowerCaseEmail = email.toLowerCase();
+
     return Object.keys(events)
       .map(eventId => {
         const participantId = events[eventId].participants.findIndex(
-          p => p.email === email
+          p => p.email.toLowerCase() === lowerCaseEmail
         );
 
         if (participantId > -1) {
