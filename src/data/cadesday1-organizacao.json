@@ -1,0 +1,18 @@
+{
+  "template": 2,
+  "meta": {
+    "type": "Organização",
+    "name": "CADESDAY #1",
+    "location": "IFRN Natal-Central"
+  },
+  "eventName": "CADESDAY #1",
+  "date": "2018-08-25T09:00:00-03:00",
+  "location": "IFRN Campus Natal-Central",
+  "hours": 8,
+  "participants": [
+    {
+      "name": "Felipe Mateus Freire Pontes",
+      "email": "felipemfpontes@gmail.com"
+    }
+  ]
+}
