@@ -39,7 +39,7 @@ const Segment = styled.div`
   border-radius: 0.2rem;
 `;
 
-export default class Home extends Component {
+export default class NotFound extends Component {
   render() {
     return (
       <Container>

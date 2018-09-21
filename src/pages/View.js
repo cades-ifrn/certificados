@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { PDFViewer, Document } from "@react-pdf/renderer";
 import { Redirect } from "react-router-dom";
 import hashids from "../hashids";
+import registerFonts from "../registerFonts";
 
-import events from "../data/events";
+import { events } from "../data/events";
 
 import Certificate from "../components/Certificate";
 
@@ -18,6 +19,10 @@ const Viewer = styled(PDFViewer)`
 `;
 
 export default class ViewPage extends React.Component {
+  componentWillMount = () => {
+    registerFonts();
+  };
+
   render = () => {
     const {
       match: {

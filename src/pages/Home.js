@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import hashids from "../hashids";
-import events from "../data/events";
 
 import { Input } from "reactstrap";
+
 import Event from "../components/Event";
+import SplashScreen from "../components/SplashScreen";
 
 import logo from "../assets/logo.svg";
 
@@ -56,7 +57,7 @@ const P = styled.p`
 `;
 
 export default class Home extends Component {
-  state = { email: "" };
+  state = { email: "", events: {}, loading: true };
 
   validateEmail = email =>
     // eslint-disable-next-line
@@ -72,7 +73,7 @@ export default class Home extends Component {
   };
 
   findParticipations = () => {
-    const { email } = this.state;
+    const { email, events } = this.state;
 
     if (email === "" || !this.validateEmail(email)) {
       return [];
@@ -95,8 +96,22 @@ export default class Home extends Component {
       .filter(Boolean);
   };
 
-  render() {
-    const { email } = this.state;
+  componentDidMount = () => {
+    import("../data/events").then(({ events }) => {
+      this.setState(() => ({
+        loading: false,
+        events
+      }));
+    });
+  };
+
+  render = () => {
+    const { events, loading, email } = this.state;
+
+    if (loading) {
+      return <SplashScreen />;
+    }
+
     const participations = this.findParticipations();
 
     return (
@@ -134,5 +149,5 @@ export default class Home extends Component {
         </Wrapper>
       </Container>
     );
-  }
+  };
 }
