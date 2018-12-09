@@ -10,14 +10,14 @@ export default () => {
   registered = true;
 
   Font.register(
-    "https://cdn.rawgit.com/google/fonts/c9d3903b/ofl/lato/Lato-Regular.ttf",
+    "https://cdn.jsdelivr.net/gh/google/fonts@c9d3903b/ofl/lato/Lato-Regular.ttf",
     {
       family: "Lato"
     }
   );
 
   Font.register(
-    "https://cdn.rawgit.com/google/fonts/c9d3903b/ofl/lato/Lato-Bold.ttf",
+    "https://cdn.jsdelivr.net/gh/google/fonts@c9d3903b/ofl/lato/Lato-Bold.ttf",
     {
       family: "Lato-Bold"
     }
